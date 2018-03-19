@@ -1,0 +1,23 @@
+{
+  "name": "pokemon-fan",
+  "version": "1.0.0",
+  "description": "a pokemon fan game made by a fan.",
+  "main": "app.js",
+  "scripts": {
+    "test": "example heroku"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhi1030/pokemon-fan.git"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "Abhishek Sinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhi1030/pokemon-fan/issues"
+  },
+  "homepage": "https://github.com/abhi1030/pokemon-fan#readme"
+}
