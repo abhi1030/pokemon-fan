@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000
 // creating routes
 var home = require('./routes/index');
 var menu = require('./routes/menu');
+var game = require('./routes/game');
 
 
 var app = express();
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routing the views
 app.use('/', home);
 app.use('/menu', menu);
+app.use('/game', game);
 
 /* app.get('/',function(req,res){
 	 res.sendFile(__dirname + '/public/index.html');
