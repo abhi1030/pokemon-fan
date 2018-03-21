@@ -16,8 +16,11 @@
   ],
   "author": "Abhishek Sinha",
   "license": "ISC",
-   "dependencies": {
-    "express": "^4.16.3"
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "express": "^4.16.3",
+    "pug": "^2.0.2",
+    "mongoose": "*"
   },
   "bugs": {
     "url": "https://github.com/abhi1030/pokemon-fan/issues"
