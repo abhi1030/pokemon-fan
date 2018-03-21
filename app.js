@@ -1,16 +1,25 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
-var mongoose = require('mongoose');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000
 
-// creating routes
-var home = require('./routes/index');
-var menu = require('./routes/menu');
-var game = require('./routes/game');
-var highscore = require('./routes/highscore');
+// global constiables
+const conn = 'mongodb://heroku:golu1030@ds113179.mlab.com:13179/pokemon-fan';
 
-var app = express();
+
+// creating routes
+const home = require('./routes/index');
+const menu = require('./routes/menu');
+const game = require('./routes/game');
+const highscore = require('./routes/highscore');
+
+const app = express();
+
+
+// connecting to dataBase
+const db = mongoose.createConnection(conn);
+
 
 // view engine setup
 app.set('views', path.join(__dirname,'views'));

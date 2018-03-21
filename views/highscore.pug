@@ -5,12 +5,12 @@ block content
 		table(class='box')
 			tr
 				th Name
-				th Score
-			tr
-				td Abhishek Sinha
-				td 999
-			tr
-				td Vivek Sinha
-				td 999
+				th Type
+				th Number
+			each pokemon in pokemons
+				tr
+					td= pokemon.name
+					td= pokemon.type
+					td= pokemon.no
 		a(href='/menu')
 			button Back
