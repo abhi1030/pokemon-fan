@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000
 var home = require('./routes/index');
 var menu = require('./routes/menu');
 var game = require('./routes/game');
-
+var highscore = require('./routes/highscore');
 
 var app = express();
 
@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', home);
 app.use('/menu', menu);
 app.use('/game', game);
+app.use('/highscore',highscore);
 
 /* app.get('/',function(req,res){
 	 res.sendFile(__dirname + '/public/index.html');
