@@ -2,10 +2,12 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var mongoose = require('mongoose');
+const PORT = process.env.PORT || 5000
 
 // creating routes
 var home = require('./routes/index');
 var menu = require('./routes/menu');
+
 
 var app = express();
 
@@ -26,9 +28,9 @@ app.use('/menu', menu);
 	 res.sendFile(__dirname + '/public/index.html');
  });
  */
-app.listen(5000, function(err , result){
+app.listen(PORT, function(err , result){
 	if(err){
 		colsole.log(err);
 	}
-	console.log('server started on port 3000');
+	console.log('server started on port ' + PORT);
 });
