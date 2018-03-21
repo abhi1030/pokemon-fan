@@ -2,3 +2,20 @@ body{
 	margin:0;
 	padding-top:0px;
 }
+.box{
+    padding: 15px;
+    text-align: left;
+	width:400px;
+	text-align:center;
+	
+}
+.box tr{
+	border:2px solid blue;
+	background-color:#8cffe6;
+}
+.box th{
+	color:#04649b;
+}
+.box td{
+	color: #00af1d;
+}
