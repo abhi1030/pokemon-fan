@@ -62,6 +62,7 @@ router.post('/',function(req,res){
 			
 		
 		}
+		if(found){
 		found.update({name:name,type:type,hp:hp,attack:attack,defence:defence,speed:speed,level:level,exp:exp,moves:{one:one,two:two,three:three,four:four}},function(err,done){
 			if(err){
 				res.redirect('/pokemon');
@@ -71,6 +72,7 @@ router.post('/',function(req,res){
 			
 			});
 		});
+		}
 		
 	});
 });
