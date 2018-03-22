@@ -1,16 +1,15 @@
 extends layout
 block content
-	center
-		h1 Highscore
-		table(class='box')
+	h1 Highscore
+	table(class='box')
+		tr
+			th Name
+			th Type
+			th Number
+		each pokemon in pokemons
 			tr
-				th Name
-				th Type
-				th Number
-			each pokemon in pokemons
-				tr
-					td= pokemon.name
-					td= pokemon.type
-					td= pokemon.no
-		a(href='/menu')
-			button Back
+				td= pokemon.name
+				td= pokemon.type
+				td= pokemon.no
+	a(href='/menu')
+		button Back

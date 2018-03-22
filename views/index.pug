@@ -1,11 +1,35 @@
 extends layout
 
 block content
-	center
-		img(src='images/title.png', width='300px' , height='300px')
-		h1= title
-		a(href='/menu')
-			button Load Game
-		p This is a #{title} game made by #{name}
-		p This game is in building stage you can contribute to this project on www.github/abhi1030/pokemon-fan.
-		
+	img(src='images/title.png', width='240px' , height='240px')
+	br
+	a(href='/menu')
+		button Load Game
+	p This is a #{title} game made by #{name}
+	p This game is in building stage you can contribute to this project on www.github/abhi1030/pokemon-fan.
+	form(method='post' action='/register')
+		table
+			tr
+				th Firstname
+				td
+					input(type='text' name='firstname' required)
+			tr
+				th Lastname
+				td
+					input(type='text' name='lastname' required)
+			tr
+				th Email ID
+				td
+					input(type='text' name='email' required)
+			tr
+				th Username
+				td
+					input(type='text' name='username' required)
+			tr
+				th Password
+				td
+					input(type='password' name='password' reqiured)
+			tr
+				td
+				td
+					input(type='submit' value='Register')

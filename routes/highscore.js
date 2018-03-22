@@ -1,23 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 
-// global variables
-const conn = 'mongodb://heroku:golu1030@ds113179.mlab.com:13179/pokemon-fan';
+const pokemon = require('../lib/pokemon');
 
-const schema = mongoose.Schema({
-	name:String,
-	type:String,
-	no:Number
-});
-
-// Connecting to dataBase
-const db = mongoose.createConnection(conn);
-const mymodel = db.model('pokemon',schema);
-
+//const pokelist = new pokemon();
 router.get('/', function(req,res,next){
-	mymodel.find({}, function(err,docs){
-		
+	pokemon.find({}, function(err,docs){
+		if(err){
+			console.log(err);
+		}
 		res.render('highscore',{'title':'Pokemon-Fan',
 			'pokemons': docs
 		});

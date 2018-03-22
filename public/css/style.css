@@ -1,13 +1,12 @@
 body{
-	margin:0;
-	padding-top:0px;
+	margin-top:0px;
+	padding:0px;
 }
 .box{
     padding: 15px;
     text-align: left;
 	width:400px;
 	text-align:center;
-	
 }
 .box tr{
 	border:2px solid blue;
@@ -18,4 +17,8 @@ body{
 }
 .box td{
 	color: #00af1d;
+}
+.container{
+	width:80%;
+	background-color: #ffc34c;
 }
