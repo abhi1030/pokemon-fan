@@ -30,6 +30,7 @@ function drawPokemon(){
 function update(){
 	num = numbox.value;
 	//alert(num);
+	
 }
 function next(){
 	if(num < 386){

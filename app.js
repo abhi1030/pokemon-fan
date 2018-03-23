@@ -23,7 +23,7 @@ app.set('view engine' , 'pug');
 // middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(session({secret:"abcdefghijklm", resave:false,saveUninitialized:true}));
+app.use(session({secret:"abcdefghijklm", resave:false,saveUninitialized:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routing the views

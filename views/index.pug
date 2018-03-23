@@ -3,12 +3,31 @@ extends layout
 block content
 	img(src='images/title.png', width='240px' , height='240px')
 	br
-	a(href='/menu')
-		button Load Game
+	br
+	a(href='/game')
+		button(class='btn') Play Demo
+	br
+	br
+	form(method='post' action='login')
+		table(class='box')
+			tr
+				th Username
+				td
+					input(type='text' name='username' required)
+			tr
+				th Password
+				td
+					input(type='password' name='password' required)
+			tr
+				td(colspan='2')
+					input(type='submit' value='Login' class='btn')
+
+
+
 	p This is a #{title} game made by #{name}
 	p This game is in building stage you can contribute to this project on www.github/abhi1030/pokemon-fan.
 	form(method='post' action='/register')
-		table
+		table(class='box')
 			tr
 				th Firstname
 				td
@@ -28,8 +47,7 @@ block content
 			tr
 				th Password
 				td
-					input(type='password' name='password' reqiured)
+					input(type='password' name='password' required)
 			tr
-				td
-				td
-					input(type='submit' value='Register')
+				td(colspan='2')
+					input(type='submit' value='Register' class='btn')

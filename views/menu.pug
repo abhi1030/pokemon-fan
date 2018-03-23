@@ -4,13 +4,19 @@ block content
 	img(src='/images/title.png' width='300px' height='300px')
 	br
 	br
+	br
 	a(href='/game')
-		button Start Game
+		button(class='btn') Start Game
 	br
 	br
 	a(href='/pokemon')
-		button Edit Pokemon Data
+		button(class='btn') Edit Pokemon Data
 	br
 	br
-	a(href='/')
-		button Back
+	
+	form(method='post' action="/logout")
+		input(type='submit' value='Logout' class='btn')
+
+	br
+	br
+	br

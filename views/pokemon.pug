@@ -1,15 +1,18 @@
 extends layout
 
 block content
+	
+
 	canvas(id='imgbox')
 	br
+
 	h3= message
 	br
-	button(onclick="back()" ) Back
+	button(onclick="back()" class='btn') Back
 	label  : 
-	button(onclick="update()") Update
+	button(onclick="update()" class='btn') Update
 	label  : 
-	button(onclick="next()") Next
+	button(onclick="next()" class='btn') Next
 	br
 	br
 	div(id='inputbox')
@@ -18,7 +21,7 @@ block content
 			input(type='number' name='no' id='no' required)
 			br
 			br
-			table
+			table(class='box')
 				tr
 					td Name
 					td
@@ -64,13 +67,14 @@ block content
 					th
 						input(type='text' name='four' required)
 				tr
-					td
-					td
-						input(type='submit' value='submit')
+					td(colspan='2')
+						input(type='submit' value='submit' class='btn')
 			br
 			br
 	a(href="/menu")
-		button Back to Menu
+		button(class='btn') Back to Menu
+	br
+	br
 	table(class='box')
 		tr
 			th No
