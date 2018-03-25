@@ -1,0 +1,95 @@
+extends layout
+
+block content
+	
+
+	canvas(id='imgbox')
+	br
+
+	h3= message
+	br
+	button(onclick="back()" class='btn') Back
+	label  : 
+	button(onclick="update()" class='btn') Update
+	label  : 
+	button(onclick="next()" class='btn') Next
+	br
+	br
+	div(id='inputbox')
+		form(method='post' action='')
+			label Number : 
+			input(type='number' name='no' id='no' required)
+			br
+			br
+			table(class='box')
+				tr
+					td Name
+					td
+						input(type='text' name='name' required)
+				tr
+					td Type
+					td
+						input(type='text' name='type' required)
+				tr
+					td HP
+					td
+						input(type='number' name='hp' required)
+				tr
+					td Speed
+					td
+						input(type='number' name='speed' required)
+				tr
+					td Attack
+					td
+						input(type='number' name='attack' required)
+				tr
+					td Defence
+					td
+						input(type='number' name='defence' required)
+				tr
+					td Level
+					td
+						input(type='number' name='level' required)
+				tr
+					td EXP
+					td
+						input(type='number' name='exp' required)
+				tr
+					th(colspan="2") Moves
+				tr
+					th
+						input(type='text' name='one' required)
+					th
+						input(type='text' name='two' required)
+				tr
+					th
+						input(type='text' name='three' required)
+					th
+						input(type='text' name='four' required)
+				tr
+					td(colspan='2')
+						input(type='submit' value='submit' class='btn')
+			br
+			br
+	a(href="/menu")
+		button(class='btn') Back to Menu
+	br
+	br
+	table(class='box')
+		tr
+			th No
+			th Name
+			th Type
+			th Attack
+			th Defence
+			th Speed
+		each pokemon in pokemons
+			tr
+				td= pokemon.no
+				td= pokemon.name
+				td= pokemon.type
+				td= pokemon.attack
+				td= pokemon.defence
+				td= pokemon.speed
+			
+	script(src='./js/anim.js')

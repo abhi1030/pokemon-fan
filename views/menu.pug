@@ -1,16 +1,22 @@
 extends layout
 
 block content
-	center
-		img(src='/images/title.png' width='200px' height='200px')
-		br
-		a(href='/game')
-			button Start Game
-		br
-		br
-		a(href='/highscore')
-			button Highscore
-		br
-		br
-		a(href='/')
-			button Back
+	img(src='/images/title.png' width='300px' height='300px')
+	br
+	br
+	br
+	a(href='/game')
+		button(class='btn') Start Game
+	br
+	br
+	a(href='/pokemon')
+		button(class='btn') Edit Pokemon Data
+	br
+	br
+	
+	form(method='post' action="/logout")
+		input(type='submit' value='Logout' class='btn')
+
+	br
+	br
+	br
