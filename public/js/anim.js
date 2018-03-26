@@ -25,7 +25,7 @@ function drawPokemon(){
 	var xx = x*64;
 	var yy = y*64;
 	brush.clearRect(0,0,canvas.width,canvas.height);
-	brush.drawImage(pokemons,xx,yy,60,60,0,0,200,200);
+	brush.drawImage(pokemons,xx,yy,64,64,0,0,200,200);
 }
 function update(){
 	num = numbox.value;
